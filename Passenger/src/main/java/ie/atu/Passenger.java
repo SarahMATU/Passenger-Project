@@ -40,4 +40,18 @@ public class Passenger {
                 return userName;
         }
 
+        public String setUserId(String id)
+        {
+                if(id.length() > 10 )
+                {
+                        userId = id;
+                }
+
+                else
+                {
+                        throw new IllegalArgumentException("This is not a valid Name");
+                }
+                return userId;
+        }
+
 }
