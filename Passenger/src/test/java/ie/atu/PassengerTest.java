@@ -34,13 +34,16 @@ class PassengerTest {
     }
 
     @Test
-    void testName() {
-        assertEquals("Sarah", myPass.setUserName("Sarah"));
-    }
+    void testName() {assertEquals("Sarah", myPass.setUserName("Sarah"));}
 
     @Test
     void testId() {
-        assertEquals("4738GEHS837", myPass.setUserName("4738GEHS837"));
+        assertEquals("4738GEHS837", myPass.setUserId("4738GEHS837"));
+    }
+
+    @Test
+    void testPhone() {
+        assertEquals("0876984572", myPass.setNumPhone("0876984572"));
     }
 
     @AfterEach
