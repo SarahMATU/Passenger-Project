@@ -33,6 +33,10 @@ class PassengerTest {
         assertEquals("Ms", myPass.setUserTitle("Ms"));
     }
 
+    @Test
+    void testName() {
+        assertEquals("Sarah", myPass.setUserName("Sarah"));
+    }
 
     @AfterEach
     void tearDown() {    }
