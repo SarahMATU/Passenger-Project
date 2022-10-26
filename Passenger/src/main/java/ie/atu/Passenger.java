@@ -26,4 +26,18 @@ public class Passenger {
                 return userTitle;
         }
 
+        public String setUserName(String name)
+        {
+                if(name.length() > 3 )
+                {
+                        userName = name;
+                }
+
+                else
+                {
+                        throw new IllegalArgumentException("This is not a valid Name");
+                }
+                return userName;
+        }
+
 }
