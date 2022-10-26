@@ -49,9 +49,23 @@ public class Passenger {
 
                 else
                 {
-                        throw new IllegalArgumentException("This is not a valid Name");
+                        throw new IllegalArgumentException("This is not a valid ID");
                 }
                 return userId;
         }
 
+        public String setNumPhone(String phone)
+        {
+                if(phone.length() > 7
+                )
+                {
+                        numPhone = phone;
+                }
+
+                else
+                {
+                        throw new IllegalArgumentException("This is not a valid Phone Number");
+                }
+                return numPhone;
+        }
 }
