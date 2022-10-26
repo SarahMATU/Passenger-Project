@@ -68,4 +68,19 @@ public class Passenger {
                 }
                 return numPhone;
         }
+
+        public int setNumAge(int age)
+        {
+                if(age > 16)
+                {
+                        numAge = age;
+                }
+
+                else
+                {
+                        throw new IllegalArgumentException("This is not a valid Phone Number");
+                }
+                return numAge;
+        }
+
 }

@@ -46,6 +46,9 @@ class PassengerTest {
         assertEquals("0876984572", myPass.setNumPhone("0876984572"));
     }
 
+    @Test
+    void testAge() {assertEquals(17, myPass.setNumAge(17));}
+
     @AfterEach
     void tearDown() {    }
 }
