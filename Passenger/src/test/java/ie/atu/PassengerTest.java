@@ -15,14 +15,13 @@ class PassengerTest {
     }
 
     @Test
-    void testConstructorSuccess()
+    void testConstructor()
     {
 
     }
 
     @Test
-    void testConstructorFail()
-    {
+    void testConstructorFail()  {
 
     }
 
@@ -34,20 +33,20 @@ class PassengerTest {
     }
 
     @Test
-    void testName() {assertEquals("Sarah", myPass.setUserName("Sarah"));}
+    void testNameFail()    {assertEquals("Sarah", myPass.setUserName("Sarah"));}
 
     @Test
-    void testId() {
+    void testIdFail() {
         assertEquals("4738GEHS837", myPass.setUserId("4738GEHS837"));
     }
 
     @Test
-    void testPhone() {
+    void testPhoneFail() {
         assertEquals("0876984572", myPass.setNumPhone("0876984572"));
     }
 
     @Test
-    void testAge() {assertEquals(17, myPass.setNumAge(17));}
+    void testAgeFail() {assertEquals(17, myPass.setNumAge(17));}
 
     @AfterEach
     void tearDown() {    }
