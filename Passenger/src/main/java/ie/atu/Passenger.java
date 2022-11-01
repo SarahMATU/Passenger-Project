@@ -11,7 +11,7 @@ public class Passenger {
         private String numPhone;
         private int numAge;
 
-        public Passenger(String title, String name, String id, String phone, int age){ //Default Constructor
+        public Passenger(String title, String name, String id, String phone, int age) { //Default Constructor
                 setUserTitle(title);
                 setUserName(name);
                 setUserId(id);
@@ -83,7 +83,6 @@ public class Passenger {
                         throw new IllegalArgumentException("User must be over 16");
                 }
         }
-
         public int getNumAge() {
                 return numAge;
         }
