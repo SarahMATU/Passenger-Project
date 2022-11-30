@@ -4,8 +4,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
+
 @Service
 public class PassengerService {
+
+
 
     public List <Passenger> getPassenger ()
     {
@@ -22,5 +26,6 @@ public class PassengerService {
         Passenger myPassenger = new Passenger("Mrs", "Sarah", "3E7F9N2Y6W4T", "0895746178", 25);
         return myPassenger;
     }
+
 
 }

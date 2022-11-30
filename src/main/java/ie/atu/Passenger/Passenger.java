@@ -8,9 +8,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.*;
+
 @Getter
 @Setter
 @NoArgsConstructor
+@Entity
+@Table
 public class Passenger {
 
         private String userTitle;
@@ -18,6 +22,10 @@ public class Passenger {
         private String userId;
         private String numPhone;
         private int numAge;
+        @Id
+        @GeneratedValue(strategy = GenerationType.AUTO)
+        private long count;
+
 
         public Passenger(String title, String name, String id, String phone, int age) { //Default Constructor
                 setUserTitle(title);
