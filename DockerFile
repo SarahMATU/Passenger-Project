@@ -1,4 +1,4 @@
 FROM openjdk:17
-COPY target/classes/ /tmp
+COPY Passenger/target/classes/ /tmp
 WORKDIR /tmp
-CMD java ie.atu.Passenger
+CMD java ie.atu.Passenger.PassengerApplication
