@@ -8,10 +8,24 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
+import org.springframework.data.annotation.Id;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Table;
+
 @Getter
 @Setter
 @NoArgsConstructor
+@Entity
+@Table
 public class Passenger {
+
+@Id
+@GeneratedValue(strategy = GenerationType.AUTO)
+private long count;
 
         private String userTitle;
         private String userName;
