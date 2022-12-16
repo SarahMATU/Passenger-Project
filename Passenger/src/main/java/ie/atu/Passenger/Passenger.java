@@ -11,10 +11,7 @@ import lombok.Setter;
 
 import org.springframework.data.annotation.Id;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Getter
 @Setter
@@ -22,16 +19,19 @@ import javax.persistence.Table;
 @Entity
 @Table
 public class Passenger {
-
-@Id
-@GeneratedValue(strategy = GenerationType.AUTO)
-private long count;
+        @javax.persistence.Id
+        @Column(name = "id", nullable = false)
+        private Long id;
 
         private String userTitle;
         private String userName;
         private String userId;
         private String numPhone;
         private int numAge;
+
+        @Id
+        @GeneratedValue(strategy = GenerationType.AUTO)
+        private long count;
 
         public Passenger(String title, String name, String id, String phone, int age) { //Default Constructor
                 setUserTitle(title);
