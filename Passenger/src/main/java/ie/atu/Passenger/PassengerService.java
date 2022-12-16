@@ -1,12 +1,16 @@
 package ie.atu.Passenger;
 
 import lombok.AllArgsConstructor;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @AllArgsConstructor
 @Service
+@Component
+
 
 public class PassengerService {
     private final PassengerRepo passengerRepo;
