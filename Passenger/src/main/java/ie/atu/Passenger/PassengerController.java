@@ -4,10 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController
@@ -33,6 +31,23 @@ public class PassengerController {
     public Passenger getPassenger(@PathVariable String passengerID)
     {
         return myService.getPassenger(passengerID);
+    }
+
+    //Save
+    @PostMapping("")
+    public void savePassenger(
+            @RequestBody Passenger passenger
+    )
+    {
+
+       myService.savePassenger(passenger);
+    }
+
+    //FInd by Name
+    @GetMapping("/user_name/{user_name}")
+    public Passenger getPassengerName(@PathVariable("user_name")String user_name)
+    {
+        return myService.findPassengerByName(user_name);
     }
 
 }

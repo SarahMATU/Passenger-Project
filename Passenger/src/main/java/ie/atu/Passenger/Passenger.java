@@ -33,12 +33,13 @@ public class Passenger {
         @GeneratedValue(strategy = GenerationType.AUTO)
         private long count;
 
-        public Passenger(String title, String name, String id, String phone, int age) { //Default Constructor
+        public Passenger(String title, String name, String id, String phone, int age ) { //Default Constructor
                 setUserTitle(title);
                 setUserName(name);
                 setUserId(id);
                 setNumPhone(phone);
                 setNumAge(age);
+                count++;
         }
 
         public void setUserTitle(String title) { //Sets the Users Title

@@ -1,3 +1,91 @@
+GET http://localhost:8081/api/passenger/user_name/John%20Jane
+
+###
+
+GET http://localhost:8081/api/passenger/user_name/Mary%20Jane
+
+###
+
+GET http://localhost:8081/api/passenger/user_name/{{user_name}}
+
+###
+
+GET http://localhost:8081/api/passenger/user_name/John%20Jane
+
+<> 2022-12-17T214137.404.json
+
+###
+
+GET http://localhost:8081/api/passenger/user_name/John%20Jane
+
+<> 2022-12-17T213954.404.json
+
+###
+
+GET http://localhost:8081/api/passenger/user_name/{{John
+
+###
+
+GET http://localhost:8081/api/passenger
+
+<> 2022-12-17T213157.200.json
+
+###
+
+GET http://localhost:8081/api/passenger
+
+<> 2022-12-17T213103.200.json
+
+###
+
+GET http://localhost:8081/api/passenger
+
+<> 2022-12-17T212925.200.json
+
+###
+
+GET http://localhost:8081/api/passenger/{{passengerID}}
+
+###
+
+GET http://localhost:8081/api/passenger/{{passengerID}}
+
+###
+
+GET http://localhost:8081/api/passenger/{{passengerID}}
+
+###
+
+POST http://localhost:8081/api/passenger
+
+<> 2022-12-17T212657.400.json
+
+###
+
+POST http://localhost:8081/api/passenger
+
+<> 2022-12-17T212653.400.json
+
+###
+
+POST http://localhost:8081/api/passenger
+
+<> 2022-12-17T212551.400.json
+
+###
+
+POST http://localhost:8081/api/passenger
+
+<> 2022-12-17T212324.400.json
+
+###
+
+POST http://localhost:8081/api/passenger
+
+<> 2022-12-17T212320.400.json
+
+###
+
 GET http://localhost:8081/api/passenger
 
 <> 2022-12-16T232338.200.json

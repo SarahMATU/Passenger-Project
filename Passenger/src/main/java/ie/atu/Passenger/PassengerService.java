@@ -1,7 +1,6 @@
 package ie.atu.Passenger;
 
 import lombok.AllArgsConstructor;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +25,15 @@ public class PassengerService {
     {
         Passenger myPassenger = new Passenger("Mrs", "Sarah", "3E7F9N2Y6W4T", "0895746178", 25);
         return myPassenger;
+    }
+
+    public void savePassenger (Passenger passenger){
+        passengerRepo.save(passenger);
+    }
+
+    public Passenger findPassengerByName (String user_name){
+        return passengerRepo.findPassengerByName(user_name);
+
     }
 
 }

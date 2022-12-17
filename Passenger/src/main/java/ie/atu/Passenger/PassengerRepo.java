@@ -5,4 +5,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PassengerRepo extends JpaRepository<Passenger, Long> {
+    Passenger findPassengerByName(String user_name);
 }
