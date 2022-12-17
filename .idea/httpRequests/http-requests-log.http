@@ -1,3 +1,7 @@
+GET http://localhost:8081/api/passenger/user_name/Mary%20Jane
+
+###
+
 GET http://localhost:8081/api/passenger/user_name/John%20Jane
 
 ###

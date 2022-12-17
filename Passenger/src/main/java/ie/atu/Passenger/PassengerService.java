@@ -39,4 +39,8 @@ public class PassengerService {
         passengerRepo.deletePassenger(count);
     }
 
+    public List <Passenger> findPassengerByAgeRange (int age, int age2)
+    {
+        return passengerRepo.findPassengerByAge(age, age2);
+    }
 }
