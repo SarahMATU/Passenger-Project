@@ -1,19 +1,23 @@
 package ie.atu.Passenger;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@AllArgsConstructor
 @Service
+@Component
+
+
 public class PassengerService {
+
+    private final PassengerRepo passengerRepo;
 
     public List <Passenger> getPassenger ()
     {
-        List<Passenger> myPassenger = List.of(
-                new Passenger("Mrs", "Sarah", "3E7F9N2Y1H4T", "0895746178", 30),
-                new Passenger("Mrs", "Rayah", "3E7F9U9Y1H4T", "0895734578", 25),
-                new Passenger("Mrs", "Brittany", "3E7F9N2Y6W4T", "0894827178", 65));
-        return myPassenger;
+      return passengerRepo.findAll();
     }
 
 
@@ -23,4 +27,20 @@ public class PassengerService {
         return myPassenger;
     }
 
+    public void savePassenger (Passenger passenger){
+        passengerRepo.save(passenger);
+    }
+
+    public Passenger findPassengerByName (String user_name){
+        return passengerRepo.findPassengerByName(user_name);
+    }
+
+    public void deletePassenger (Long count){
+        passengerRepo.deletePassenger(count);
+    }
+
+    public List <Passenger> findPassengerByAgeRange (int age, int age2)
+    {
+        return passengerRepo.findPassengerByAge(age, age2);
+    }
 }
