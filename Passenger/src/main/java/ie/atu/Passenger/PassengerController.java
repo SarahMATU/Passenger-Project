@@ -43,11 +43,18 @@ public class PassengerController {
        myService.savePassenger(passenger);
     }
 
-    //FInd by Name
+    //Find by Name
     @GetMapping("/user_name/{user_name}")
     public Passenger getPassengerName(@PathVariable("user_name")String user_name)
     {
         return myService.findPassengerByName(user_name);
+    }
+
+    //Delete by Count
+    @DeleteMapping("/count/{count}")
+    public void deletePassenger(@PathVariable("count")Long count)
+    {
+       myService.deletePassenger(count);
     }
 
 }

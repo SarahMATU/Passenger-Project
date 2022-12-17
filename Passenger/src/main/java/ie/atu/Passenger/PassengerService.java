@@ -33,7 +33,10 @@ public class PassengerService {
 
     public Passenger findPassengerByName (String user_name){
         return passengerRepo.findPassengerByName(user_name);
+    }
 
+    public void deletePassenger (Long count){
+        passengerRepo.deletePassenger(count);
     }
 
 }
